@@ -17,6 +17,7 @@
     'init_xml' : [ ],
     'demo_xml' : [ ],
     'update_xml' : [
+        'views/view.xml',
     ],
     'active': False,
     'installable': True,
