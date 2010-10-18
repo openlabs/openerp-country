@@ -1,0 +1,4 @@
+1. Create menu in the same level as countries and states called 
+	'Install new country & subdivisions'
+2. Create view for osv_memory wizard to choose a country and then
+	click install
