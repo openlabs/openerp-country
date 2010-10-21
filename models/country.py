@@ -7,6 +7,9 @@
 from osv import osv, fields
 
 class CountryState(osv.osv):
+    """
+    Inherit Country.State and create a field for State Code 
+    """
     _inherit = 'res.country.state'
     
     _columns = {

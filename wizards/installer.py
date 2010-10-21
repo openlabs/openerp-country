@@ -13,30 +13,19 @@ import pycountry
 
 from osv import osv, fields
 
-def get_countries(klass, cursor, user, context=None):
-    """
-    Returns a list of tuple of countries
-    Each tuple contains the Country Name and Code
-    e.g. - ('India', 'IN')
-
-    suitable for selection widget
-    """
-    return [
-        (country.alpha2, country.name) \
-            for country in pycountry.countries.objects
-    ]
+COUNTRIES_LIST = [(c.alpha2, c.name) for c in pycountry.countries.objects]
 
 class InstallCountryWizard(osv.osv_memory):
     """
     A wizard to choose a country and install its
     subdivisions
     """
-    _name = 'install.country.wizard'
+    _name = 'country.subdivision_wizard'
     _description = "Install Country"
     
     _columns = {
         'country': fields.selection(
-            get_countries, 
+            COUNTRIES_LIST, 
             'Country', 
             required=True
         )
@@ -45,24 +34,34 @@ class InstallCountryWizard(osv.osv_memory):
     def install(self, cursor, user, ids, context=None):
         """
         Install the subdivisions of the country
+        
+        :param cursor: Database Cursor
+        :param user: ID of current user
+        :param ids: ID of current record.
+        :param context: Context from parent method(no direct use)
+        
+        :return: ir.actions.act_window_close for closing
         """
         country_obj = self.pool.get('res.country')
         state_obj = self.pool.get('res.country.state')
-        if ids:
-            country_code = self.browse(cursor, user, ids[0], context).country
+        for country in self.browse(cursor, user, ids, context):
+            country_code = country.country
             country_id = country_obj.name_search(cursor, user, 
                                                  name=country_code, 
                                                  context=context)[0][0]
             states = pycountry.subdivisions.get(country_code=country_code)
-            for state in states:
-                conflicting_state = state_obj.search(cursor, user, 
-                                                  [('name', '=', state.name)], 
-                                                  context=context)
-                if not conflicting_state:
+            for subdivisions in states:
+                existing_subdivisions = state_obj.search(
+                                         cursor, 
+                                         user, 
+                                         [('name', '=', subdivisions.name)], 
+                                         context=context,
+                )
+                if not existing_subdivisions:
                     vals = {
                         'country_id': country_id,
-                        'name': state.name,
-                        'code': state.code
+                        'name': subdivisions.name,
+                        'code': subdivisions.code
                             }
                     state_obj.create(cursor, user, vals, context)
             return {'type':'ir.actions.act_window_close' }

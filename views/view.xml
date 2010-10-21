@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <record model="ir.ui.view" id="install_country_wizard_view">
-            <field name="name">install.country.wizard.form</field>
-            <field name="model">install.country.wizard</field>
+        <record model="ir.ui.view" id="country_subdivision_wizard_view">
+            <field name="name">country.subdivision_wizard.form</field>
+            <field name="model">country.subdivision_wizard</field>
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <form string="Install Country">
@@ -18,13 +18,12 @@
 
         <!-- Action for CSV Import  -->
         <record id="action_install_country" model="ir.actions.act_window">
-            <field name="name">Install New Country</field>
+            <field name="name">Install Subdivisions (States/Counties/Regions)</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">install.country.wizard</field>
+            <field name="res_model">country.subdivision_wizard</field>
             <field name="view_type">form</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
-            <field name="auto_refresh" eval="1" />
         </record>
 
         <menuitem action="action_install_country"

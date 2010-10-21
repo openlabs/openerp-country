@@ -9,6 +9,8 @@
     'author' : 'Openlabs Technologies & Consulting (P) LTD',
     'description': '''
     Install additional countries and subdivisions.
+    
+    Note : Requires pycountry module. Use easy_install
 
     Inspired by Tryton (http://tryton.org)
     ''',

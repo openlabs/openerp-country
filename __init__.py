@@ -9,5 +9,5 @@ Inspired by Tryton
 :copyright: (c) 2010 by Openlabs Technologies & Consulting (P) LTD.
 :license: AGPL, see LICENSE for more details
 '''
-import models.wizard
+import wizards.installer
 import models.country

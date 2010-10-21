@@ -1,0 +1,54 @@
+.. country:
+
+Country
+#######
+
+OpenERP provides with the list of countries and currencies. But it does not 
+provides with the list of States/County/Subdivisions.
+
+.. note:: States, Counties, Subdivisions, Fed State etc. are referred as Subdivision(s) in the whole document.
+
+Installation
+============
+Country module is dependent on PyCountry. To install this dependency, 
+type the following command on terminal::
+
+   sudo easy_install pycountry
+
+.. note:: Make sure Python-SetupTools and Build-Essentials are already installed.
+
+Using Country Module
+====================
+
+On installing the module **Country**, the list of Subdivisions can be installed by 
+following these steps:
+
+#. Go to *Partners >> Configuration >> Localisation >> Install New Country*
+   
+   .. image:: _static/image1.png
+      :width: 1000
+      :height: 341
+   
+#. This will open a wizard. Now choose the country from the drop down menu 
+   and click on **Install New Country**
+
+   .. image:: _static/image2.png
+      :width: 1000
+      :height: 382
+
+#. This will install the subdivisions of the country selected. Here we have
+   selected the country **India** and all the subdivisions of India have been 
+   installed.
+   
+   .. image:: _static/image3.png
+      :width: 1000
+      :height: 462
+   
+#. You can use the above installed subdivisions in defining the complete address of partner under the field 
+   **Fed State**.
+
+   .. image:: _static/image4.png
+      :width: 1000
+      :height: 245
+   
+   

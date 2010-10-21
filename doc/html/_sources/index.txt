@@ -1,0 +1,21 @@
+.. Country documentation master file, created by
+   sphinx-quickstart on Wed Oct 20 11:57:56 2010.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Country Module's Documentation
+==============================
+
+The country module (inspired by Tryton) installs subdivisions 
+(states, counties, regions, federal states, and in some cases districts as well) 
+of a country to the Open ERP database. 
+
+.. note:: By default Open ERP comes packed with only subdivisions of the United States of America and does not use ISO codes. 
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+   
+   country.rst
+
