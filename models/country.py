@@ -13,7 +13,7 @@ class CountryState(osv.osv):
     _inherit = 'res.country.state'
     
     _columns = {
-        'code': fields.char('State Code', size=5,
+        'code': fields.char('State Code', size=6,
             help='The state code in five chars.\n', required=True),
     }
 
