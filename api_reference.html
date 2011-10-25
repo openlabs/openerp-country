@@ -1,0 +1,170 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API References &mdash; Country &amp; Subdivision Module 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Country &amp; Subdivision Module 0.1 documentation" href="index.html" />
+    <link rel="prev" title="Country" href="country.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="country.html" title="Country"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Country &amp; Subdivision Module 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="api-references">
+<h1>API References<a class="headerlink" href="#api-references" title="Permalink to this headline">¶</a></h1>
+<p>contents:</p>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<div class="section" id="openerp-country">
+<h2>OpenERP Country<a class="headerlink" href="#openerp-country" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="country">
+<h3>Country<a class="headerlink" href="#country" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="class">
+<dt id="openerp_country.CountryState">
+<em class="property">class </em><tt class="descclassname">openerp_country.</tt><tt class="descname">CountryState</tt><big>(</big><em>pool</em>, <em>cr</em><big>)</big><a class="headerlink" href="#openerp_country.CountryState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherit Country.State and create a field for State Code</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="installcountry">
+<h3>InstallCountry<a class="headerlink" href="#installcountry" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="class">
+<dt id="openerp_country.InstallCountryWizard">
+<em class="property">class </em><tt class="descclassname">openerp_country.</tt><tt class="descname">InstallCountryWizard</tt><big>(</big><em>pool</em>, <em>cr</em><big>)</big><a class="headerlink" href="#openerp_country.InstallCountryWizard" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wizard to choose a country and install its
+subdivisions</p>
+<dl class="method">
+<dt id="openerp_country.InstallCountryWizard.install">
+<tt class="descname">install</tt><big>(</big><em>cursor</em>, <em>user</em>, <em>ids</em>, <em>context=None</em><big>)</big><a class="headerlink" href="#openerp_country.InstallCountryWizard.install" title="Permalink to this definition">¶</a></dt>
+<dd><p>Install the subdivisions of the country</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cursor</strong> &#8211; Database Cursor</li>
+<li><strong>user</strong> &#8211; ID of current user</li>
+<li><strong>ids</strong> &#8211; ID of current record.</li>
+<li><strong>context</strong> &#8211; Context from parent method(no direct use)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">ir.actions.act_window_close for closing</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/128-128.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">API References</a><ul>
+<li><a class="reference internal" href="#openerp-country">OpenERP Country</a><ul>
+<li><a class="reference internal" href="#country">Country</a></li>
+<li><a class="reference internal" href="#installcountry">InstallCountry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="country.html"
+                        title="previous chapter">Country</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/api_reference.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="country.html" title="Country"
+             >previous</a> |</li>
+        <li><a href="index.html">Country &amp; Subdivision Module 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Openlabs Technologies &amp; Consulting (P) Ltd..
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
+    </div>
+  </body>
+</html>
