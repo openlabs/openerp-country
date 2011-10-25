@@ -1,6 +1,12 @@
-/**
- * Sphinx stylesheet -- default theme
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/*
+ * default.css_t
+ * ~~~~~~~~~~~~~
+ *
+ * Sphinx stylesheet -- default theme.
+ *
+ * :copyright: Copyright 2007-2011 by the Sphinx team, see AUTHORS.
+ * :license: BSD, see LICENSE for details.
+ *
  */
 
 @import url("basic.css");
@@ -8,16 +14,16 @@
 /* -- page layout ----------------------------------------------------------- */
 
 body {
-    font-family: helvetica, 'bitstream vera sans', sans-serif;
+    font-family: sans-serif;
     font-size: 100%;
-    background-color: #fff;
+    background-color: #11303d;
     color: #000;
     margin: 0;
     padding: 0;
 }
 
 div.document {
-    background-color: #fff;
+    background-color: #1c4e63;
 }
 
 div.documentwrapper {
@@ -30,13 +36,13 @@ div.bodywrapper {
 }
 
 div.body {
-    background-color: #fff;
+    background-color: #ffffff;
     color: #000000;
     padding: 0 20px 30px 20px;
 }
 
 div.footer {
-    color: #666;
+    color: #ffffff;
     width: 100%;
     padding: 9px 0 9px 0;
     text-align: center;
@@ -44,26 +50,26 @@ div.footer {
 }
 
 div.footer a {
-    color: #666;
+    color: #ffffff;
     text-decoration: underline;
 }
 
 div.related {
-    background-color: #fff;
+    background-color: #133f52;
     line-height: 30px;
-    color: #FFAA2D;
+    color: #ffffff;
 }
 
 div.related a {
-    color: #848489;
+    color: #ffffff;
 }
 
 div.sphinxsidebar {
 }
 
 div.sphinxsidebar h3 {
-    font-family: georgia, 'bitstream vera sans serif', 'lucida grande', helvetica, verdana, sans-serif;
-    color: #B20000;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #ffffff;
     font-size: 1.4em;
     font-weight: normal;
     margin: 0;
@@ -71,12 +77,12 @@ div.sphinxsidebar h3 {
 }
 
 div.sphinxsidebar h3 a {
-    color: #B20000;
+    color: #ffffff;
 }
 
 div.sphinxsidebar h4 {
-    font-family: georgia, 'bitstream vera sans serif', 'lucida grande', helvetica, verdana, sans-serif;
-    color: #B20000;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #ffffff;
     font-size: 1.3em;
     font-weight: normal;
     margin: 5px 0 0 0;
@@ -84,7 +90,7 @@ div.sphinxsidebar h4 {
 }
 
 div.sphinxsidebar p {
-    color: #333;
+    color: #ffffff;
 }
 
 div.sphinxsidebar p.topless {
@@ -94,23 +100,30 @@ div.sphinxsidebar p.topless {
 div.sphinxsidebar ul {
     margin: 10px;
     padding: 0;
-    color: #B20000;
+    color: #ffffff;
 }
 
 div.sphinxsidebar a {
-    color: #848484;
+    color: #98dbcc;
 }
 
 div.sphinxsidebar input {
-    border: 1px solid #848484;
+    border: 1px solid #98dbcc;
     font-family: sans-serif;
     font-size: 1em;
 }
 
-/* -- body styles ----------------------------------------------------------- */
+
+
+/* -- hyperlink styles ------------------------------------------------------ */
 
 a {
-    color: #848484;
+    color: #355f7c;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #355f7c;
     text-decoration: none;
 }
 
@@ -118,10 +131,9 @@ a:hover {
     text-decoration: underline;
 }
 
-div.body p, div.body dd, div.body li {
-    text-align: justify;
-    line-height: 130%;
-}
+
+
+/* -- body styles ----------------------------------------------------------- */
 
 div.body h1,
 div.body h2,
@@ -129,10 +141,10 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: georgia, 'bitstream vera sans serif', 'lucida grande', helvetica, verdana, sans-serif;
-    background-color: #fff;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #f2f2f2;
     font-weight: normal;
-    color: #4F4F4F;
+    color: #20435c;
     border-bottom: 1px solid #ccc;
     margin: 20px -20px 10px -20px;
     padding: 3px 0 3px 10px;
@@ -207,7 +219,7 @@ p.admonition-title:after {
 
 pre {
     padding: 5px;
-    background-color: #fff;
+    background-color: #eeffcc;
     color: #333333;
     line-height: 120%;
     border: 1px solid #ac9;
@@ -221,10 +233,24 @@ tt {
     font-size: 0.95em;
 }
 
+th {
+    background-color: #ede;
+}
+
 .warning tt {
     background: #efc2c2;
 }
 
 .note tt {
     background: #d6d6d6;
+}
+
+.viewcode-back {
+    font-family: sans-serif;
+}
+
+div.viewcode-block:target {
+    background-color: #f4debf;
+    border-top: 1px solid #ac9;
+    border-bottom: 1px solid #ac9;
 }
